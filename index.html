@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="JobFinder - Find your dream job from thousands of opportunities." />
+  <title>JobFinder | Find Your Dream Job</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="#home" aria-label="JobFinder home"><span class="brand-icon">💼</span> JobFinder</a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a class="active" href="#home">Home</a>
+      <a href="#jobs">Jobs</a>
+      <a href="#companies">Companies</a>
+      <a href="#about">About Us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="theme-btn" id="themeBtn" aria-label="Toggle dark mode">☾</button>
+      <button class="btn btn-outline" id="loginBtn">Login</button>
+      <button class="btn btn-primary" id="registerBtn">Register</button>
+    </div>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <span class="eyebrow">CAREER OPPORTUNITIES</span>
+        <h1>Find Your <span>Dream Job</span></h1>
+        <p>Discover thousands of job opportunities with top companies and take the next step in your career.</p>
+        <form class="search-box" id="searchForm">
+          <label><span>Job Title or Keyword</span><input id="keyword" type="text" placeholder="e.g. Software Developer" /></label>
+          <label><span>Location</span><input id="location" type="text" placeholder="e.g. Delhi, Remote" /></label>
+          <label><span>Category</span><select id="category"><option value="">All Categories</option><option>Software Development</option><option>Design</option><option>Data Science</option><option>Marketing</option><option>Finance</option></select></label>
+          <button class="search-btn" type="submit">⌕ <span>Search Jobs</span></button>
+        </form>
+        <div class="popular"><strong>Popular:</strong><button data-search="React">React</button><button data-search="Java">Java</button><button data-search="Python">Python</button><button data-search="UI/UX">UI/UX</button><button data-search="Data Science">Data Science</button><button data-search="Remote">Remote</button></div>
+      </div>
+    </section>
+
+    <section class="stats container">
+      <div><strong>50K+</strong><span>Active Jobs</span></div><div><strong>12K+</strong><span>Companies</span></div><div><strong>1.5M+</strong><span>Job Seekers</span></div><div><strong>95%</strong><span>Success Rate</span></div>
+    </section>
+
+    <section class="section container" id="jobs">
+      <div class="section-head"><div><span class="eyebrow dark">OPPORTUNITIES</span><h2>Popular Jobs</h2></div><button class="text-btn" id="viewAll">View All Jobs →</button></div>
+      <div class="content-grid">
+        <div class="jobs-grid" id="jobGrid"></div>
+        <aside class="companies-card" id="companies"><div class="card-head"><h3>Top Companies</h3><button class="text-btn">View All</button></div><div class="company-list" id="companyList"></div></aside>
+      </div>
+    </section>
+
+    <section class="section categories" id="about">
+      <div class="container"><div class="section-head centered"><div><span class="eyebrow dark">EXPLORE</span><h2>Browse Jobs by Category</h2><p>Find opportunities that match your skills and career goals.</p></div></div>
+        <div class="category-grid"><button class="category-card" data-search="Software"><span>💻</span><strong>Software Development</strong><small>12,480 Jobs</small></button><button class="category-card" data-search="Design"><span>🎨</span><strong>Design & Creative</strong><small>5,230 Jobs</small></button><button class="category-card" data-search="Data"><span>📊</span><strong>Data Science</strong><small>4,870 Jobs</small></button><button class="category-card" data-search="Marketing"><span>📣</span><strong>Marketing</strong><small>3,910 Jobs</small></button><button class="category-card" data-search="Finance"><span>💰</span><strong>Finance & Accounting</strong><small>3,450 Jobs</small></button><button class="category-card" data-search="HR"><span>👥</span><strong>Human Resources</strong><small>2,870 Jobs</small></button></div>
+      </div>
+    </section>
+
+    <section class="cta" id="contact"><div class="container cta-inner"><div><span class="eyebrow">START YOUR JOURNEY</span><h2>Ready to Find Your Next Opportunity?</h2><p>Create your profile and let top companies discover you.</p></div><button class="btn btn-light" id="ctaBtn">Create Free Profile →</button></div></section>
+  </main>
+
+  <footer><div class="container footer-grid"><div><a class="brand" href="#home"><span class="brand-icon">💼</span> JobFinder</a><p>Connecting talented people with opportunities that matter.</p></div><div><h4>For Job Seekers</h4><a href="#jobs">Browse Jobs</a><a href="#">Career Advice</a><a href="#">My Applications</a></div><div><h4>For Employers</h4><a href="#">Post a Job</a><a href="#companies">Find Candidates</a><a href="#">Pricing</a></div><div><h4>Company</h4><a href="#about">About Us</a><a href="#contact">Contact</a><a href="#">Privacy Policy</a></div></div><div class="footer-bottom container">© 2026 JobFinder. Built as a college mini project.</div></footer>
+
+  <div class="modal" id="modal" aria-hidden="true"><div class="modal-box"><button class="modal-close" id="modalClose">×</button><div class="modal-icon">💼</div><h2 id="modalTitle">Welcome to JobFinder</h2><p id="modalText">Create an account to save jobs and track applications.</p><form id="modalForm"><input type="text" placeholder="Full name" required><input type="email" placeholder="Email address" required><input type="password" placeholder="Password" required><button class="btn btn-primary" type="submit">Continue</button></form></div></div>
+  <script src="script.js"></script>
+</body>
+</html>
